@@ -9,6 +9,11 @@ function newColorArea(x, y, r, c) {
   mapDiv.innerHTML+="<div class='point' style='left: "+x+"px; top:"+y+"px; background-color: "+c+"; box-shadow: 0 0 "+r+"px "+(r-20)+"px "+c+";'></div>"
 }
 
+function clear() {
+  console.log(4)
+  mapDiv.innerHTML = "<img draggable='false' src='map.png' id='map'>";
+}
+
 let color = "#ff0000"
 
 let mouseDown = false
