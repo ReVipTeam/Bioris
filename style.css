@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  background-color: #302112;
+  user-select: none;
+}
+
+#map {
+  height: 99.6vh;
+}
+
+#mapDiv {
+  position: relative;
+}
+
+.point {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: red;
+  top: 200px;
+  left: 200px;
+  box-shadow: 0 0 120px 100px red;
+}
