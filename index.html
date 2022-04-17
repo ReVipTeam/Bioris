@@ -10,6 +10,9 @@
     <div id="mapDiv">
       <img draggable="false" src="map.png" id="map">
     </div>
+    <button class="submit_button" onclick="size+=5">+</button>
+    <button class="submit_button" onclick="size-=5">-</button><br>
+    <input id="colorPicker" class="input_to_form" type="color" value="#ff0000">
     <div>
       <input id="idd" placeholder="ID детектора" type="text" class="input_to_form" required>
       <input id="xd" placeholder="X" required type="number"  class="input_to_form">
@@ -25,8 +28,6 @@
       <br>
       <button onclick="putSwan(document.getElementById('idds').value, document.getElementById('ids').value, Number(document.getElementById('rates').value))" class="submit_button">Добавить</button>
     </div>
-    <br><br><br>
-    <button onclick="detectors={}" class="submit_button">Очистить</button>
   </center>
   <script src="main.js">
   </script>
