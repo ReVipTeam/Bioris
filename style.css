@@ -72,7 +72,7 @@ body {
 }
 
 .submit_button:hover {
-  background-color: rgb(5, 87, 55);
+  background-color: rgb(10, 175, 112);
   box-shadow: 0px 15px 20px rgba(173, 255, 0, 0.53);
   transform: translateY(-3px);
 }
