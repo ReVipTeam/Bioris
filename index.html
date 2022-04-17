@@ -9,10 +9,58 @@
   <center>
     <div id="mapDiv">
       <img draggable="false" src="map.png" id="map">
-
+    </div>
+    <div>
+      <input id="idd" placeholder="ID детектора" type="text" class="input_to_form" required>
+      <input id="xd" placeholder="X" required type="number">
+      <input id="yd" placeholder="Y" required type="number">
+      <button onclick="putDetector(document.getElementById('idd').value, Number(document.getElementById('xd').value), Number(document.getElementById('yd').value))">Добавить</button>
+    </div>
+    <div>
+      <input id="idds" placeholder="ID детектора" type="text" class="input_to_form" required>
+      <input id="ids" placeholder="ID аномалии" type="text" class="input_to_form" required>
+      <input id="rates" placeholder="Интенсивность" required type="number">
+      <button onclick="putSwan(document.getElementById('idds').value, document.getElementById('ids').value, Number(document.getElementById('rate').value))"></button>
     </div>
   </center>
   <script src="main.js">
+  </script>
+  <script>
+    class Detector{
+      constructor(opts){
+        this.x = opts.x
+        this.y = opts.y
+        this.id = opts.id
+        this.swans = opts.swans
+      }
+    }
+    class Swan{
+      constructor(opts){
+          this.id = opts.id
+          this.rate = opts.rate
+          this.x = null
+          this.y = null
+          this.g = null
+          this.values = []
+      }
+
+      get_coords_and_intensive(values){
+          //математика Рустама
+      }
+
+      update_values(x, y, g){
+          this.values.append((x, y, g))
+          if (this.values.length === 3)
+              this.get_coords_and_intensive(this.values)
+      }
+  }
+    let detectors = {}
+    function putDetector(id, x, y){
+      detectors[id] = (new Detector({id: id, x: x, y: y, swans: {}}))
+    }
+    function putSwan(idd, id, rate){
+      detectors[idd].swans[id] = new Swan({id: id, rate: rate})
+    }
   </script>
 </body>
 </html>
