@@ -9,7 +9,7 @@ function newArea(x, y, r, c) {
 
 
 mapDiv.addEventListener("click", function(e) {
-  newArea(e.clientX, e.clientY, Math.random()*200, Math.random());
+  newArea(e.clientX, e.clientY, Math.random()*100, Math.random());
   //point.style.setProperty('left', (''+e.clientX)+"px");
   //point.style.setProperty('top', (''+e.clientY)+"px");
 })
