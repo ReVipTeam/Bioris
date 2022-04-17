@@ -16,11 +16,12 @@
       <input id="yd" placeholder="Y" required type="number"  class="input_to_form">
       <button onclick="putDetector(document.getElementById('idd').value, Number(document.getElementById('xd').value), Number(document.getElementById('yd').value))">Добавить</button>
     </div>
+    <br><br>
     <div>
       <input id="idds" placeholder="ID детектора" type="text" class="input_to_form" required>
       <input id="ids" placeholder="ID аномалии" type="text" class="input_to_form" required>
       <input id="rates" placeholder="Интенсивность" required type="number"  class="input_to_form">
-      <button onclick="putSwan(document.getElementById('idds').value, document.getElementById('ids').value, Number(document.getElementById('rate').value))"></button>
+      <button onclick="putSwan(document.getElementById('idds').value, document.getElementById('ids').value, Number(document.getElementById('rates').value))" class="submit_button">Добавить</button>
     </div>
   </center>
   <script src="main.js">
