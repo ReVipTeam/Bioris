@@ -3,7 +3,8 @@ const point = document.getElementById('point');
 
 function newArea(x, y) {
   //console.log("<div class='point' " + "style='left: "+x+"; top:"+y+";'></div>");
-  mapDiv.innerHTML+="<div class='point' " + "style='left: "+x+"px; top:"+y+"px; position: absolute;'></div>"
+  mapDiv.innerHTML+="<div class='point' style='left: "+x+"px; top:"+y+"px; background-color: rgb("+c*255+", 0, 0); box-shadow: 0 0 "+r+"px "+(r-20)+"px rgb("+c*255+", 0, 0);'></div>"
+
 }
 
 
