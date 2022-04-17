@@ -41,8 +41,8 @@
       constructor(opts){
           this.id = opts.id
           this.rate = opts.rate
-          this.x = null
-          this.y = null
+          this.x = opts.x
+          this.y = opts.y
           this.g = null
           this.values = []
       }
@@ -62,7 +62,7 @@
       detectors[id] = (new Detector({id: id, x: x, y: y, swans: {}}))
     }
     function putSwan(idd, id, rate){
-      detectors[idd].swans[id] = new Swan({id: id, rate: rate})
+      detectors[idd].swans[id] = new Swan({id: id, rate: rate, x: detectors[idd].x, y: detectors[idd].y})
     }
   </script>
 </body>
